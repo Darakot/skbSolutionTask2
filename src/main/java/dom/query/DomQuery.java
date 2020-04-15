@@ -1,18 +1,26 @@
 package dom.query;
 
 import dom.DocumentXML;
-import lombok.NoArgsConstructor;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@NoArgsConstructor
+/**
+ * Класс для запросов
+ * printValueNode - выводит в консоль значения атрибута "value" для каждого тега в теле ns1:header
+ * countNodes - выводит в консоль количество элементов в body
+ * getNodes - приватный метод для получение всех нод в узле
+ * getValueNode - приватный метод для получения значения у ноды
+ */
 public class DomQuery implements DomQueruImpl {
-    private DocumentXML documentXML = new DocumentXML();
+    private DocumentXML documentXML;
     List<String> nodes = new ArrayList<>();
-    private String nameFile = "inputDataXml.xml";
+
+    public DomQuery(String nameFile) {
+        documentXML = new DocumentXML(nameFile);
+    }
 
     @Override
     public void printValueNode() {
@@ -32,7 +40,7 @@ public class DomQuery implements DomQueruImpl {
 
 
         NodeList nodes = documentXML
-                .getDocument(nameFile)
+                .getDocument()
                 .getElementsByTagName(parentNode)
                 .item(0)
                 .getChildNodes();
@@ -45,7 +53,7 @@ public class DomQuery implements DomQueruImpl {
 
     private String getValueNode(String node) {
         Document doc = documentXML
-                .getDocument(nameFile);
+                .getDocument();
 
         return doc
                 .getElementsByTagName(node)

@@ -1,6 +1,6 @@
 package dom;
 
-import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
@@ -10,12 +10,18 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 
-@NoArgsConstructor
-public class DocumentXML {
+/**
+ * Класс создает документ для парсинга
+ * getDocument - возвращает документ с которым будем работать
+ */
 
-    public Document getDocument(String nameDoc){
+@AllArgsConstructor
+public class DocumentXML {
+    private String fileName = "";
+
+    public Document getDocument(){
         ClassLoader classLoader = DocumentXML.class.getClassLoader();
-        File file = new File(classLoader.getResource(nameDoc).getFile());
+        File file = new File(classLoader.getResource(fileName).getFile());
 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = null;
