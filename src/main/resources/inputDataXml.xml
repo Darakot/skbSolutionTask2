@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:ns1="http://ns1">
+    <ns1:header>
+        <ns1:h1 value="1"/>
+        <ns1:h2 value="2"/>
+        <ns1:h3 value="3"/>
+    </ns1:header>
+    <body>
+        <f1>value1</f1>
+        <f2>value2</f2>
+        <f3>value3</f3>
+    </body>
+</root>
+
