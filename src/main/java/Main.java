@@ -1,3 +1,4 @@
+import dom.DocumentXsl;
 import dom.query.DomQuery;
 
 public class Main {
@@ -7,5 +8,6 @@ public class Main {
         domQuery.printValueNode();
         domQuery.countNodes();
 
+        DocumentXsl.queryXsl("inputDataXslt.xsl","inputDataXml.xml");
     }
 }

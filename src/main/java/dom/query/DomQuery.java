@@ -1,6 +1,6 @@
 package dom.query;
 
-import dom.DocumentXML;
+import dom.DocumentXml;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
@@ -15,11 +15,11 @@ import java.util.List;
  * getValueNode - приватный метод для получения значения у ноды
  */
 public class DomQuery implements DomQueruImpl {
-    private DocumentXML documentXML;
+    private DocumentXml documentXML;
     List<String> nodes = new ArrayList<>();
 
     public DomQuery(String nameFile) {
-        documentXML = new DocumentXML(nameFile);
+        documentXML = new DocumentXml(nameFile);
     }
 
     @Override

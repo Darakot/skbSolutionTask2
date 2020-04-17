@@ -16,11 +16,11 @@ import java.io.IOException;
  */
 
 @AllArgsConstructor
-public class DocumentXML {
+public class DocumentXml {
     private String fileName = "";
 
     public Document getDocument(){
-        ClassLoader classLoader = DocumentXML.class.getClassLoader();
+        ClassLoader classLoader = DocumentXml.class.getClassLoader();
         File file = new File(classLoader.getResource(fileName).getFile());
 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
