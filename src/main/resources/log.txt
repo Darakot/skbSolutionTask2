@@ -1,0 +1,2 @@
+2020-04-20 04:58:47 ERROR DocumentXsl.queryXsl:33 - line 2: Unsupported XSL element 'stylesheet123123'.
+2020-04-20 05:00:25 ERROR DocumentXsl.queryXsl:33 - Не удалось распарсить файл line 2: Unsupported XSL element 'stylesheet123123'.

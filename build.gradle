@@ -16,4 +16,6 @@ dependencies {
     //lombok
     compileOnly 'org.projectlombok:lombok:1.18.12'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    //logs
+    compile group: 'log4j', name: 'log4j', version: '1.2.16'
 }

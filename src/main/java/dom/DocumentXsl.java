@@ -1,5 +1,7 @@
 package dom;
 
+import lombok.extern.log4j.Log4j;
+
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
@@ -9,7 +11,7 @@ import javax.xml.transform.stream.StreamSource;
 /**
  * Класс для исполнения запроса xsl файлы
  */
-
+@Log4j
 public class DocumentXsl {
 
     public static void queryXsl(String xsl,String xml){
@@ -27,9 +29,8 @@ public class DocumentXsl {
             transformer = factory.newTransformer(xslStream);
             transformer.transform(in,out);
 
-        } catch (
-                TransformerException e) {
-            e.printStackTrace();
+        } catch (TransformerException e) {
+            log.error("Не удалось распарсить файл " + e.getMessage());
         }
     }
 }
